@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+
+auth-server-url: http://localhost:9000
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      scope: test
+      access-token-uri: ${auth-server-url}/oauth/token
+      user-authorization-uri: ${auth-server-url}/oauth/authorize
+    resource:
+      token-info-uri: ${auth-server-url}/oauth/check_token
